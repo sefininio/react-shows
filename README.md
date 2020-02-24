@@ -42,3 +42,22 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Build and run with docker
+
+Build docker image:
+
+ >**docker build -t react-shows:1.0 .**
+
+Run with docker:
+
+ >**docker run -d --name mongo mongo:4.2.3**
+
+ >**docker run -d --name react_shows -p 5000:5000 react-shows:1.0**
+
+Run with docker-compose:
+
+ >**export REACT_SHOWS_VERSION=1.0**
+
+ >**docker-compose up -d**

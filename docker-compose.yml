@@ -1,0 +1,16 @@
+version: '3.2'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:4.2.3
+    restart: unless-stopped
+
+  react_shows:
+    container_name: react_shows
+    image: react-shows:${REACT_SHOWS_VERSION}
+    restart: unless-stopped
+    ports:
+      - 5000:5000
+    depends_on:
+      - mongo
