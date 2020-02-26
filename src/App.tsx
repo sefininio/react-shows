@@ -50,6 +50,7 @@ class App extends React.Component<Props, State> {
         const { q, shows } = this.state;
         return (
             <div className="App">
+                <h1>React Shows</h1>
                 <Router>
                     <Switch>
                         <Route path="/home">
